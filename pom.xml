@@ -24,7 +24,7 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
 					<webApp>
-						<contextPath>/spring-mvc-beginner</contextPath>
+						<contextPath>/</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
