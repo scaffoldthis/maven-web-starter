@@ -5,15 +5,26 @@
 	id="WebApp_ID" version="2.5">
 
 	<display-name>My Application</display-name>
-	
+
 	<servlet>
 		<servlet-name>demo</servlet-name>
 		<servlet-class>com.scaffoldthis.DemoServlet</servlet-class>
 	</servlet>
+
+	<servlet>
+		<servlet-name>createUser</servlet-name>
+		<servlet-class>com.scaffoldthis.CreateUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>createUser</servlet-name>
+		<url-pattern>/createUser</url-pattern>
+	</servlet-mapping>
 	
 	<servlet-mapping>
 		<servlet-name>demo</servlet-name>
 		<url-pattern>hello</url-pattern>
 	</servlet-mapping>
+
 
 </web-app>
