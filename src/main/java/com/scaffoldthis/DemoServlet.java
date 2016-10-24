@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.scaffoldthis.dao.UserDao;
+import com.scaffoldthis.dao.UserHibernateDao;
 
 public class DemoServlet extends HttpServlet {
 	
@@ -15,7 +15,7 @@ public class DemoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-		if(new UserDao().isValidUser(username, password)){
+		if(new UserHibernateDao().isValidUser(username, password)){
 			req.setAttribute("username", "admin");
 			req.getRequestDispatcher("home.jsp").forward(req, resp);
 		}

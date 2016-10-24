@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.scaffoldthis.dao.UserDao;
+import com.scaffoldthis.dao.UserHibernateDao;
 
 public class CreateUserServlet extends HttpServlet {
 	@Override
@@ -15,7 +16,7 @@ public class CreateUserServlet extends HttpServlet {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 
-		new UserDao().createUser(username, password);
+		new UserHibernateDao().createUser(username, password);
 
 		resp.sendRedirect("login.jsp");
 	}
